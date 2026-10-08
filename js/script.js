@@ -384,7 +384,7 @@ function bindCards() {
                 `Hola, quiero consultar sobre el combo ${c.name}.`,
                 '',
                 'CONSULTA DE COMBO',
-                '==============================',
+                '=============================',
                 `Combo: ${c.name}`,
                 '',
                 'Quisiera conocer disponibilidad, precio y condiciones.',
@@ -421,8 +421,8 @@ function bindCards() {
             const message = [
                 `Hola, quiero consultar sobre la oferta ${o.name}.`,
                 '',
-                'CONSULTA DE OFERTA',
-                '==============================',
+                '*CONSULTA DE OFERTA*',
+                '=============================',
                 `Oferta: ${o.name}`,
                 `Cantidad: ${o.quantity} unidades`,
                 '',
@@ -817,7 +817,8 @@ function orderMessage(customer) {
        ===================================================== */
 
     const customerText = [
-        'DATOS DEL CLIENTE',
+        ' ',
+        '*DATOS DEL CLIENTE*',
         '==============================',
         `Nombre: ${customer.name}`,
         `Dirección: ${customer.address}`,
@@ -835,21 +836,26 @@ function orderMessage(customer) {
     return [
         `Hola, quiero realizar un pedido en ${store.name}.`,
         '',
-        'VALE DE PEDIDO',
-        '==============================',
+        '*VALE DE PEDIDO*',
+        '=============================',
         '',
         ...productsText,
-        '==============================',
+        '',
+        '=============================',
         `SUBTOTAL: ${subtotal}`,
+        '',
         'MENSAJERÍA: Por confirmar',
+        '',
         'TOTAL: Por confirmar',
+        '',
         '',
         ...customerText,
         '',
-        '==============================',
+        '',
+        '=============================',
         '',
         'Solicito confirmación de disponibilidad, precio final y condiciones del pedido.',
-        'El pedido queda PENDIENTE hasta recibir confirmación de un agente de la tienda.',
+        'El pedido queda *PENDIENTE* hasta recibir confirmación de un agente de la tienda.',
         'El costo de la mensajería será informado por el agente.'
     ]
         .filter(Boolean)
@@ -1185,7 +1191,20 @@ function storeInfo() {
                 const n = phone(k);
 
                 if (n) {
-                    e.href = `https://wa.me/${n}`;
+
+                    const message =
+                        k === 'support'
+                            ? 'Hola, quisiera obtener información sobre sus productos.'
+                            : '';
+
+                    e.href =
+                        `https://wa.me/${n}` +
+                        (
+                            message
+                                ? `?text=${encodeURIComponent(message)}`
+                                : ''
+                        );
+
                     e.target = '_blank';
                     e.rel = 'noopener noreferrer';
                 }

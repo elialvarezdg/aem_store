@@ -9,7 +9,7 @@ export const store = {
     whatsapp: {
 
         offers:  { number: "+5352627046", name: null, gmail: null },
-        combos:  { number: "+5352627046", name: null, gmail: null },
+        combos:  { number: "+5354421880", name: null, gmail: null },
         orders:  { number: "+5352627046", name: null, gmail: null },
         support: { number: "+5352627046", name: null, gmail: null },
 
