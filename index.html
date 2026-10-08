@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <meta 
+            name="description" 
+            content="Aquí Encuentras Más. Productos, combos y ofertas en Bayamo, Granma."
+        >
+        
+        <title>TCP | Aquí Encuentras Más</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <div class="container navbar">
+
+                <a class="brand" href="index.html">
+                    <span>AQUÍ ENCUENTRAS MÁS</span>
+                </a>
+
+                <nav class="nav-links" data-mobile-menu>
+                    <a href="index.html">Inicio</a>
+                    <a href="view/catalog.html">Catálogo</a>
+                    <a href="#combos">Combos</a>
+                    <a href="#ofertas">Ofertas</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+
+                <div class="navbar-actions">
+
+                    <button
+                        class="cart-button"
+                        type="button"
+                        data-cart-toggle
+                        aria-label="Abrir pedido"
+                    >
+                        <img
+                            src="image/carrito.png"
+                            alt="PED"
+                            class="cart-icon"
+                        >
+
+                        <span
+                            class="cart-count"
+                            data-cart-count
+                            aria-live="polite"
+                        >0</span>
+                    </button>
+
+                    <button
+                        class="menu-button"
+                        type="button"
+                        data-menu-toggle
+                        aria-label="Abrir menú"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+
+            </div>
+        </header>
+
+
+        <main>
+
+            <section class="hero">
+
+                <div class="hero__overlay"></div>
+
+                <div class="container">
+
+                    <div class="hero__content">
+
+                        <p class="hero__brand">
+                            TCP
+                        </p>
+
+                        <p class="hero__location">
+                            Bayamo · Granma
+                        </p>
+
+                        <h1 class="hero__title">
+                            Aquí encuentras más
+                        </h1>
+
+                        <p class="hero__copy">
+                            Productos para el día a día, combos y ofertas por cantidad.
+                            Encuentra lo que necesitas y arma tu pedido de forma sencilla.
+                        </p>
+
+                        <div class="hero__actions">
+
+                            <a class="button button--yellow" href="view/catalog.html">
+                                Ver catálogo
+                            </a>
+
+                            <a class="button button--outline-light" href="#contacto">
+                                Contactar
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero__line"></div>
+
+            </section>
+
+
+            <section class="trust-strip">
+
+                <div class="container trust-grid">
+
+                    <div class="trust-item">
+                        <strong>Calidad</strong>
+                        <span>Productos para todos los días</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <strong>Variedad</strong>
+                        <span>Productos, combos y cantidades</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <strong>Domicilio</strong>
+                        <span>Costo adicional a consultar</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="section">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <div class="section-heading__title__alternative">
+                            <h2 class="title">Para tu día</h2>
+                        </div>
+
+                        <p class="section-heading__description">
+                            Encuentra productos para el día a día, opciones para compartir y mucho más.
+                        </p>
+
+                    </div>
+
+                    <div class="product-grid" id="featured-products"></div>
+
+                    <div style="margin-top:32px;text-align:center">
+                        <a class="button button--outline" href="view/catalog.html">
+                            Explorar catálogo completo
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="section section--dark" id="combos">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <div class="section-heading__title__alternative">
+                            <h2 class="title">Más por menos</h2>
+                        </div>
+
+                        <p class="section-heading__description">
+                            Combos personalizados con productos y cantidades a tu medida. Añade productos de aseo y ajusta el precio según tu selección.
+                        </p>
+
+                    </div>
+
+                    <div class="combo-grid" id="featured-combos"></div>
+
+                </div>
+
+            </section>
+
+
+            <section class="section" id="ofertas">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <div class="section-heading__title">
+                            <h2 class="title">Compra en cantidad</h2>
+                        </div>
+
+                        <p class="section-heading__description">
+                            Ofertas especiales asociadas a un producto y una
+                            cantidad determinada.
+                        </p>
+
+                    </div>
+
+                    <div class="offer-grid" id="featured-offers"></div>
+
+                </div>
+
+            </section>
+
+
+            <section class="section section--dark" id="servicios">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <div class="section-heading__title__alternative">
+                            <h2 class="title">Simple y claro</h2>
+                        </div>
+
+                        <p class="section-heading__description">
+                            El sitio organiza tu solicitud. La tienda realiza
+                            la confirmación final por WhatsApp.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-grid">
+
+                        <!-- 01 — BUSCA -->
+                        <article class="service-card">
+
+                            <div class="service-motion service-motion--search" aria-hidden="true">
+                                <div class="motion-search">
+                                    <span></span>
+                                </div>
+                            </div>
+
+                            <h3>Busca</h3>
+
+                            <br>
+
+                            <p>
+                                Encuentra productos, combos u ofertas desde el catálogo.
+                            </p>
+
+                        </article>
+
+
+                        <!-- 02 — ARMA -->
+                        <article class="service-card">
+
+                            <div class="service-motion service-motion--build" aria-hidden="true">
+
+                                <div class="motion-block motion-block--one"></div>
+                                <div class="motion-block motion-block--two"></div>
+                                <div class="motion-block motion-block--three"></div>
+
+                                <div class="motion-box"></div>
+
+                            </div>
+
+                            <h3>Arma</h3>
+
+                            <br>
+
+                            <p>
+                                Añade al pedido lo que necesitas y revisa tu vale.
+                            </p>
+
+                        </article>
+
+
+                        <!-- 03 — CONFIRMA -->
+                        <article class="service-card">
+
+                            <div class="service-motion service-motion--confirm" aria-hidden="true">
+
+                                <div class="motion-line motion-line--one"></div>
+                                <div class="motion-line motion-line--two"></div>
+                                <div class="motion-line motion-line--three"></div>
+
+                                <div class="motion-check"></div>
+
+                            </div>
+
+                            <h3>Confirma</h3>
+
+                            <br>
+
+                            <p>
+                                Un agente confirma disponibilidad, precio final y domicilio.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="section section--contact" id="contacto">
+
+                <div class="container contact-section">
+
+                    <div class="contact-content">
+
+                        <div class="section-heading__title__alternative">
+                            <h2 class="title">Encuéntranos y hablemos</h2>
+                        </div>
+                        
+
+                        <div class="contact-location">
+
+                            <div class="contact-location__address">
+                                <span>Estamos en</span>
+                                <strong data-store-address>
+                                    Dirección pendiente
+                                </strong>
+                            </div>
+
+                            <div class="contact-location__hours">
+                                <span>Horario</span>
+                                <strong>
+                                    Lunes — Domingo
+                                    <br>
+                                    <span data-store-opening></span>
+                                    —
+                                    <span data-store-closing></span>
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-talk">
+
+                            <span>¿Necesitas algo?</span>
+
+                            <p>
+                                Escríbenos directamente o únete a nuestra comunidad
+                            </p>
+
+                            <div class="contact-actions">
+
+                                <a
+                                    href="#"
+                                    class="contact-action contact-action--primary"
+                                    data-whatsapp-domicilios>
+                                    <span>WhatsApp</span>
+                                    <strong>Escríbenos</strong>
+                                </a>
+
+                                <a
+                                    href="#"
+                                    class="contact-action"
+                                    data-whatsapp-channel>
+                                    <span>Canal de WhatsApp</span>
+                                    <strong>Unirme</strong>
+                                </a>
+
+                                <a
+                                    href="#"
+                                    class="contact-action"
+                                    data-whatsapp-group>
+                                    <span>Grupo de WhatsApp</span>
+                                    <strong>Unirme</strong>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="contact-map"
+                        data-map
+                    >
+                        <div class="map-placeholder">
+                            <span>Mapa</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="site-footer">
+
+            <div class="container">
+
+                <div class="footer-grid">
+
+                    <div>
+
+                        <a class="brand" href="index.html">
+                            <span>AQUÍ ENCUENTRAS MÁS</span>
+                        </a>
+
+                        <p class="footer-description">
+                            De todo, para todos, todos los días. Productos, combos
+                            y ofertas con pedido sencillo por WhatsApp.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="footer-title">Explora</p>
+
+                        <div class="footer-links">
+                            <a href="view/catalog.html">Catálogo</a>
+                            <a href="#combos">Combos</a>
+                            <a href="#ofertas">Ofertas</a>
+                            <a href="#ubicacion">Ubicación</a>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="footer-title">Información</p>
+
+                        <div class="footer-links">
+                            <a
+                                href="#"
+                                data-store-address
+                            >
+                                Dirección
+                            </a>
+
+                            <span>
+                                <span data-store-opening></span> —
+                                <span data-store-closing></span>
+                            </span>
+
+                            <a href="#" data-whatsapp-channel>
+                                Canal de WhatsApp
+                            </a>
+
+                            <a href="#" data-whatsapp-group>
+                                Grupo de WhatsApp
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-bottom">
+
+                    <span>
+                        © <span data-year></span>
+                        <span data-store-name>Aquí Encuentras Más</span>.
+                    </span>
+
+                    <span>
+                        Diseño y desarrollo: Eli Alvarez
+                    </span>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <aside class="cart" data-cart>
+
+            <div class="cart__header">
+                <h2>Tu pedido</h2>
+                <button class="cart-close" data-cart-close>Cerrar</button>
+            </div>
+
+            <div class="cart__body">
+
+                <div class="cart-empty" data-cart-empty>
+                    <strong>Tu pedido está vacío.</strong>
+                    <p style="margin-top:7px">
+                        Agrega productos, combos u ofertas.
+                    </p>
+                </div>
+
+                <div data-cart-items></div>
+
+            </div>
+
+            <div class="cart__footer" data-cart-footer hidden>
+
+                <div class="cart__total">
+                    <span>Subtotal del pedido</span>
+
+                    <strong data-cart-total>
+                        Consultar
+                    </strong>
+                </div>
+
+                <button
+                    class="button button--dark"
+                    type="button"
+                    data-whatsapp-order
+                >
+                    Confirmar pedido
+                </button>
+
+                <button
+                    class="button button--outline button--delete"
+                    type="button"
+                    data-clear-cart
+                >
+                    Vaciar pedido
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <div class="cart-overlay" data-cart-overlay></div>
+
+
+        <script type="module" src="js/script.js"></script>
+
+    </body>
+
+</html>
