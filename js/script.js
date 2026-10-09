@@ -382,12 +382,13 @@ function bindCards() {
 
             const message = [
                 `Hola, quiero consultar sobre el combo ${c.name}.`,
-                '',
+                ' ',
                 'CONSULTA DE COMBO',
                 '=============================',
                 `Combo: ${c.name}`,
-                '',
-                'Quisiera conocer disponibilidad, precio y condiciones.',
+                `Precio: ${c.price}`,
+                ' ',
+                'Quisiera conocer disponibilidad y condiciones.',
             ]
                 .join('\n');
 
@@ -420,12 +421,12 @@ function bindCards() {
 
             const message = [
                 `Hola, quiero consultar sobre la oferta ${o.name}.`,
-                '',
+                ' ',
                 '*CONSULTA DE OFERTA*',
                 '=============================',
                 `Oferta: ${o.name}`,
                 `Cantidad: ${o.quantity} unidades`,
-                '',
+                ' ',
                 'Quisiera conocer disponibilidad, precio según cantidad y condiciones.',
             ]
                 .join('\n');
@@ -819,7 +820,7 @@ function orderMessage(customer) {
     const customerText = [
         ' ',
         '*DATOS DEL CLIENTE*',
-        '==============================',
+        '=============================',
         `Nombre: ${customer.name}`,
         `Dirección: ${customer.address}`,
         `Punto de referencia: ${customer.reference}`,
@@ -835,25 +836,25 @@ function orderMessage(customer) {
 
     return [
         `Hola, quiero realizar un pedido en ${store.name}.`,
-        '',
+        ' ',
         '*VALE DE PEDIDO*',
         '=============================',
-        '',
+        ' ',
         ...productsText,
-        '',
+        ' ',
         '=============================',
         `SUBTOTAL: ${subtotal}`,
-        '',
+        ' ',
         'MENSAJERÍA: Por confirmar',
-        '',
+        ' ',
         'TOTAL: Por confirmar',
-        '',
-        '',
+        ' ',
+        ' ',
         ...customerText,
-        '',
-        '',
+        ' ',
+        ' ',
         '=============================',
-        '',
+        ' ',
         'Solicito confirmación de disponibilidad, precio final y condiciones del pedido.',
         'El pedido queda *PENDIENTE* hasta recibir confirmación de un agente de la tienda.',
         'El costo de la mensajería será informado por el agente.'
